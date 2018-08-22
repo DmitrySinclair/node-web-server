@@ -1,8 +1,8 @@
-const PORT = 3000;
-
 const hbs = require("hbs");
 const express = require("express");
 const fs = require("fs");
+
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -44,6 +44,6 @@ app.get("/about", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log("Server runs on port: " + PORT);
+app.listen(port, () => {
+  console.log("Server runs on port: " + port);
 });
